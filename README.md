@@ -1,128 +1,102 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+# 🌟 Welcome Assignment - 5
 
 ---
 
 # Assignment-05: GitHub Issues Tracker
 
-
 ### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
 
+### **All Issues:**
 
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
+- https://phi-lab-server.vercel.app/api/v1/lab/issues
 
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+### **Single Issue:**
 
+- https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
 
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
+- Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
 
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
+### **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
 
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
+- Example: https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
 
 ---
 
-## 🛠️ Technology Stack
+### 1️⃣ What is the difference between var, let, and const?
 
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
+> **use let** when the value of a variable needs to be updated later in your code. For example, if you are calculating a total price in a shopping cart, let allows change product in its specific block.
 
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
+```javascript
+let score = 10;
 ```
 
+> **use const** (short for constant) for any value that will not change. It protects the data. If anyone accidentally try to change a const value, the program will show an error immediately, helping find bugs faster.
+
+```javascript
+const pi = 3.14;
+```
+
+> **Ignore var**, either it can cause "bugs" in both mini and large projects. let and const stay exactly where we can put them (inside the curly braces { }).
+
+```javascript
+var old = 0;
+```
+
+ <br>
 
 ---
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+### 2️⃣ What is the spread operator (...)?
 
+> The spread operator which is mainly three dots `...` and useful for copying things. If there is an array and put it inside another array, then use the dots. It "spreads" the items out so user don't have to write them one by one. It's less time consuming for developers.
 
-## 📤 What to submit
+<br>
 
-- **GitHub Repository Link:**
-- **Live Site Link:**
+### 3️⃣ What is the difference between map(), filter(), and forEach()?
 
----
+These 3 are for arrays but they do different work.
 
+- **`forEach()`**: just go through the list and do it's thing, but it does not give back anything.
+- **`map()`**: is changing the list. It take a list and give back a new list with same size.
+- **`filter()`**: is picking specific things. If user want only "closed" issues, then used to remove the others.
 
+<br>
+
+### 4️⃣ What is an arrow function?
+
+> Arrow function is a easiest way to write functions using `=>`. It is shorter than the old `function` word. Also, it handle the `this` keyword better in some cases. For this, the code would be finish in one line and looks clean.
+
+**With function keyword:**
+
+```javascript
+const double = function (n) {
+  return n * 2;
+};
+```
+
+**With arrow function:**
+
+```javascript
+const double = (n) => {
+  return n * 2;
+};
+```
+
+<br>
+
+### 5️⃣ What are template literals?
+
+If we want to use variables inside a string, we use backticks `` ` `` . Sometimes we need to use multiple lines in html, so we create a div container in html file for multiple cards, then call it in js file with ".innerHTML". Like this, it's very helpful but it makes js file heavier.
+
+```javascript
+card.innerHTML = `
+    <div class="issue-card">
+        <div class="issue-content">
+            <h3 class="issue-title">${issue.title}</h3>
+            <p class="issue-desc">${issue.description}</p>
+        </div>
+    </div>
+`;
+```
+
+> We also use it to put variables directly inside the string using `${variable}`. It is much easier than using the `+` plus sign to join strings and variables.
